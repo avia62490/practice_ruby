@@ -53,11 +53,25 @@ class Car
     @color = new_color
   end
 
+  def price
+    @price
+  end
+
+  def price= (new_price)
+    @price = new_price
+  end
+
+  def info
+    p "This car is a #{color} #{make} #{model}, it costs $#{price}."
+  end
 
 end
-car1 = Car.new("Honda", "Civic", "Blue", 12000)
-p car1
 
-p car1.make
-car1.make= "Ford"
-p car1.make
+car1 = Car.new("Honda", "Civic", "Blue", 12000)
+
+car1.info
+car1.model= "CR-V"
+car1.color= "Red"
+car1.price = 13000
+car1.info
+
