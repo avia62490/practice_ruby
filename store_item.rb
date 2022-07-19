@@ -22,44 +22,46 @@
 #puts "The first car is a #{car1[:color]} #{car1[:make]} #{car1[:model]} and costs $#{car1[:price]}."
 
 class Car
-  def initialize(make, model, color, price)
-    @make = make
-    @model = model
-    @color = color
-    @price = price
+  attr_reader :make, :model, :color, :price
+  attr_writer :make, :model, :color, :price
+  def initialize(input_options)
+    @make = input_options[:make]
+    @model = input_options[:model]
+    @color = input_options[:color]
+    @price = input_options[:price]
   end
 
-  def make
-    @make
-  end
+  # def make
+  #   @make
+  # end
 
-  def make= (new_make)
-    @make = new_make
-  end
+  # def make= (new_make)
+  #   @make = new_make
+  # end
 
-  def model
-    @model
-  end
+  # def model
+  #   @model
+  # end
 
-  def model= (new_model)
-    @model = new_model
-  end
+  # def model= (new_model)
+  #   @model = new_model
+  # end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def color= (new_color)
-    @color = new_color
-  end
+  # def color= (new_color)
+  #   @color = new_color
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def price= (new_price)
-    @price = new_price
-  end
+  # def price= (new_price)
+  #   @price = new_price
+  # end
 
   def info
     p "This car is a #{color} #{make} #{model}, it costs $#{price}."
@@ -67,7 +69,7 @@ class Car
 
 end
 
-car1 = Car.new("Honda", "Civic", "Blue", 12000)
+car1 = Car.new(:make => "Honda", :model =>"Civic", :color => "Blue", :price=> 12000)
 
 car1.info
 car1.model= "CR-V"
