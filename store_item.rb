@@ -31,37 +31,6 @@ class Car
     @price = input_options[:price]
   end
 
-  # def make
-  #   @make
-  # end
-
-  # def make= (new_make)
-  #   @make = new_make
-  # end
-
-  # def model
-  #   @model
-  # end
-
-  # def model= (new_model)
-  #   @model = new_model
-  # end
-
-  # def color
-  #   @color
-  # end
-
-  # def color= (new_color)
-  #   @color = new_color
-  # end
-
-  # def price
-  #   @price
-  # end
-
-  # def price= (new_price)
-  #   @price = new_price
-  # end
 
   def info
     p "This car is a #{color} #{make} #{model}, it costs $#{price}."
